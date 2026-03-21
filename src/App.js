@@ -6,7 +6,6 @@ import RegisterPage from "./register/register";
 function App() {
 
     return (
-
         <div>
             <Routes>
                 <Route path="/" element={<LoginPage />} />
