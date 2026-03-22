@@ -6,6 +6,7 @@ function Login() {
 
   const [identifier, setIdentifier] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const disabled = !identifier || !password;
 
   const loginsubmit = async (e) => {
     e.preventDefault();
@@ -38,7 +39,11 @@ function Login() {
             value={password} 
             onChange={(e) => setPassword(e.target.value)} />
 
-          <button type="submit">Login</button>
+          <button 
+            type="submit" 
+            disabled={disabled}>
+              Login
+          </button>
         </form>
 
         <Link to="/register">
