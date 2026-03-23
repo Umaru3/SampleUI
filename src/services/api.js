@@ -1,4 +1,5 @@
-const API_BASE_URL = "http://localhost:5000/api/mongo";
+const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE_URL = `${BASE_URL}/api/mongo`;
 
 export async function login(identifier, password) {
 
